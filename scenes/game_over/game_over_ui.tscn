@@ -1,0 +1,62 @@
+[gd_scene load_steps=5 format=3 uid="uid://dd8em5inhsr13"]
+
+[ext_resource type="Script" path="res://scripts/game_over_ui.gd" id="1_3pfud"]
+[ext_resource type="LabelSettings" uid="uid://pyhea6e3tb7x" path="res://preset/label_48.tres" id="1_hsxij"]
+[ext_resource type="LabelSettings" uid="uid://bd8o0fg7af4yq" path="res://preset/label_blue_48.tres" id="2_0pygb"]
+[ext_resource type="AudioStream" uid="uid://cacx1e1rsalea" path="res://assets/audio/game_over.wav" id="4_l0axt"]
+
+[node name="game_over_ui" type="Control"]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+script = ExtResource("1_3pfud")
+
+[node name="GameOverLabel" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -0.5
+offset_top = -11.5
+offset_right = 0.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Game Over"
+label_settings = ExtResource("1_hsxij")
+
+[node name="RetryLabel" type="Label" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -125.5
+offset_top = -50.5
+offset_right = 125.5
+offset_bottom = 50.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Tap to 
+play again"
+label_settings = ExtResource("2_0pygb")
+horizontal_alignment = 1
+
+[node name="GameOverAudio" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_l0axt")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 3.0
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
