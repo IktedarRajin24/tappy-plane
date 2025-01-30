@@ -1,9 +1,9 @@
 [gd_resource type="LabelSettings" load_steps=2 format=3 uid="uid://comc61d7qv8iq"]
 
-[ext_resource type="FontFile" uid="uid://d4cwcohfcjd85" path="res://assets/fonts/LuckiestGuy-Regular.ttf" id="1_dkeqg"]
+[ext_resource type="FontFile" uid="uid://bmih1u4tho5cn" path="res://assets/fonts/gemunu-libre-v8-latin-700.ttf" id="1_r3pkg"]
 
 [resource]
-font = ExtResource("1_dkeqg")
+font = ExtResource("1_r3pkg")
 font_size = 64
 font_color = Color(0.607026, 0.735763, 1, 1)
 outline_size = 5

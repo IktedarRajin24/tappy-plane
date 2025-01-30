@@ -8,6 +8,10 @@
 [ext_resource type="AudioStream" uid="uid://dwjrxyrspbsff" path="res://assets/audio/bgm_menu.mp3" id="5_lvnhq"]
 [ext_resource type="PackedScene" uid="uid://olyhx6up2r3k" path="res://scenes/plane/plane.tscn" id="6_3tbb8"]
 
+[sub_resource type="Animation" id="Animation_c8nci"]
+length = 0.001
+loop_mode = 1
+
 [sub_resource type="Animation" id="Animation_qu3x6"]
 resource_name = "text_blink_anim"
 loop_mode = 1
@@ -24,10 +28,6 @@ tracks/0/keys = {
 "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
 }
 
-[sub_resource type="Animation" id="Animation_c8nci"]
-length = 0.001
-loop_mode = 1
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_p2qp6"]
 _data = {
 "RESET": SubResource("Animation_c8nci"),
@@ -35,6 +35,9 @@ _data = {
 }
 
 [sub_resource type="FontFile" id="FontFile_58jf5"]
+subpixel_positioning = 0
+msdf_pixel_range = 14
+msdf_size = 128
 cache/0/16/0/ascent = 0.0
 cache/0/16/0/descent = 0.0
 cache/0/16/0/underline_position = 0.0
@@ -50,6 +53,16 @@ cache/0/48/0/descent = 0.0
 cache/0/48/0/underline_position = 0.0
 cache/0/48/0/underline_thickness = 0.0
 cache/0/48/0/scale = 1.0
+cache/0/72/0/ascent = 0.0
+cache/0/72/0/descent = 0.0
+cache/0/72/0/underline_position = 0.0
+cache/0/72/0/underline_thickness = 0.0
+cache/0/72/0/scale = 1.0
+cache/0/64/0/ascent = 0.0
+cache/0/64/0/descent = 0.0
+cache/0/64/0/underline_position = 0.0
+cache/0/64/0/underline_thickness = 0.0
+cache/0/64/0/scale = 1.0
 
 [node name="Main" type="Control"]
 clip_contents = true
