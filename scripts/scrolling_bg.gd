@@ -1,11 +1,15 @@
-extends Parallax2D
+extends ParallaxBackground
 
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	SignalManager.ON_PLANE_CRASH.connect(on_plane_crash)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	screen_offset.x = GameManager.SCROLL_SPEED * delta
+	scroll_offset.x += GameManager.SCROLL_SPEED * delta
+
+
+func on_plane_crash()-> void:
+	set_process(false)

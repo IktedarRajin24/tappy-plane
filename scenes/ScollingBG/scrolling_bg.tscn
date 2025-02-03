@@ -7,8 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://dnqsv7v06d8vt" path="res://assets/background/rocks_1.png" id="4_utc34"]
 [ext_resource type="Texture2D" uid="uid://b6dan40x8rtrc" path="res://assets/background/rocks_2.png" id="5_22gp7"]
 
-[node name="ScrollingBG" type="Parallax2D"]
-z_index = -100
+[node name="ScrollingBG" type="ParallaxBackground"]
 script = ExtResource("1_vffht")
 
 [node name="ScrollingLayer" parent="." instance=ExtResource("1_et4tk")]
@@ -16,7 +15,7 @@ texture = ExtResource("2_t4g51")
 
 [node name="ScrollingLayer2" parent="." instance=ExtResource("1_et4tk")]
 texture = ExtResource("3_2s6ut")
-scroll_scale = 0.2
+scroll_scale = 0.3
 
 [node name="ScrollingLayer3" parent="." instance=ExtResource("1_et4tk")]
 texture = ExtResource("4_utc34")
@@ -24,4 +23,4 @@ scroll_scale = 0.5
 
 [node name="ScrollingLayer4" parent="." instance=ExtResource("1_et4tk")]
 texture = ExtResource("5_22gp7")
-scroll_scale = 0.7
+scroll_scale = 0.75
