@@ -8,7 +8,7 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	scroll_offset.x += GameManager.SCROLL_SPEED * delta
+	scroll_offset.x -= GameManager.SCROLL_SPEED * delta
 
 
 func on_plane_crash()-> void:
